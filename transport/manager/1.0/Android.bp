@@ -17,3 +17,24 @@ hidl_interface {
     gen_java: true,
 }
 
+cc_library_shared {
+    name: "android.hidl.manager@1.0",
+    generated_sources: ["android.hidl.manager@1.0_genc++"],
+    generated_headers: ["android.hidl.manager@1.0_genc++_headers"],
+    export_generated_headers: ["android.hidl.manager@1.0_genc++_headers"],
+    vendor_available: true,
+    shared_libs: [
+        "libhidlbase",
+        "libhidltransport",
+        "libhwbinder",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    export_shared_lib_headers: [
+        "libhidlbase",
+        "libhidltransport",
+        "libhwbinder",
+        "libutils",
+    ],
+}
