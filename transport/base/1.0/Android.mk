@@ -102,5 +102,11 @@ LOCAL_GENERATED_SOURCES += $(GEN)
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := android.hidl.base@1.0_vendor
+LOCAL_SRC_FILES :=
+LOCAL_INSTALLED_MODULE_STEM := android.hidl.base@1.0.so
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
